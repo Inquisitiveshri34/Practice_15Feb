@@ -5,6 +5,6 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
-    port: 3000, 
+    port: import.meta.env.PORT || 3000, 
   },
 });
