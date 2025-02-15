@@ -2,6 +2,10 @@
 
 This project is an Inventory Management System that allows users to add, view, and manage inventory items. The system consists of a frontend built with React and a backend powered by Node.js and MongoDB. 
 
+--
+
+## Deployed Link: https://practice-15feb-z32g.onrender.com
+
 ---
 
 ## Frontend Implementation (50 Marks)
