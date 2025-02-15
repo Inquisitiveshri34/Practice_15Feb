@@ -6,8 +6,8 @@ function Navigation() {
         <nav className="navbar">
             <h1>Inventory Management</h1>
             <ul className="nav-links">
-                <li><Link to="/items">Inventory List</Link></li>
-                <li><Link to="/items/add">Add Item</Link></li>
+                <li><Link to="/">Inventory List</Link></li>
+                <li><Link to="/add">Add Item</Link></li>
             </ul>
         </nav>
     );

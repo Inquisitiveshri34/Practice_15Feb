@@ -6,12 +6,12 @@ import '../styles/App.css';
 
 function InventoryList() {
   const [items, setItems] = useState([]);
+  const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
 
     useEffect(() => {
-        axios.get('http://localhost:4000/items')
+        axios.get(`${apiUrl}/items`)
           .then(response => {
             setItems(response.data);
-             
           })
           .catch(error => {
             console.error("There was an error fetching the data!", error);

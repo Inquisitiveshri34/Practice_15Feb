@@ -11,8 +11,8 @@ const App = () => {
       <Navigation />
       <div className="container">
         <Routes>
-          <Route path="/items" element={<InventoryList />} />
-          <Route path="/items/add" element={<InventoryForm />} />
+          <Route path="/" element={<InventoryList />} />
+          <Route path="/add" element={<InventoryForm />} />
         </Routes>
       </div>
     </Router>
