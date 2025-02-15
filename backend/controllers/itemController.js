@@ -9,6 +9,10 @@ const AddItem = async (req, res)=>{
         else if(quantity < 0 || price < 0){
             return res.status(400).json({error: "Quantity and Price cannot be negative"})
         }
+        const existingItem = await Item.find({name:name})
+        if (existingItem.length > 0){
+            return res.status(400).send("Already Item Exists")
+        }
 
         const item = new Item({
             name,
