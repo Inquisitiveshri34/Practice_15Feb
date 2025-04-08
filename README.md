@@ -2,12 +2,84 @@
 
 This project is an Inventory Management System that allows users to add, view, and manage inventory items. The system consists of a frontend built with React and a backend powered by Node.js and MongoDB. 
 
---
+## Tech Stack: 
+
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB with Mongoose
+- **Testing Tool**: Postman / Bruno
+
+## Installation Instructions: 
+
+1. Clone the repo
+   ```
+   git clone https://github.com/Inquisitiveshri34/Practice_15Feb
+   cd CA4_DB
+   ```
+2. Install Dependencies
+   ```
+   npm install
+   ```
+3. Environment Variables : Create .env file
+   ```
+   MONGO_URI = <your mongodb database>
+   ```
+4. Run the Server.
+   ```
+   npm run dev
+   ```
+
+## Database Schema: 
+
+### User Schema 
+```
+{
+  username: String (required),
+  email: String (required),
+  password: String (required)
+}
+```
+
+### Contact Schema
+
+```
+{
+  name: String (required),
+  phone: String (optional),
+  email: String (optional),
+  userId: ObjectId (ref to User)
+}
+```
+
+## Endpoints: 
+
+| Endpoint| Method| Description|
+|-----------|----|------|
+| `/users`|POST| Create a new user|
+| `/contacts`| POST| Add a new contact (linked by userId)|
+| `/contacts/:userId`| GET| Retrieve all contacts from a user|
+
+
+## Project Structure: 
+
+```
+projectName/
+├── config/
+│   └── db.js
+├── controllers/
+│   └── controller.js
+├── models/
+│   └── model.js
+├── routes/
+│   └── route.js
+├── .gitignore
+├── .env
+├── package.json
+├── README.md
+└── server.js
+```
+----
 
 ## Deployed Link: https://practice-15feb-z32g.onrender.com
-
----
-
 ## Frontend Implementation (50 Marks)
 
 ### **InventoryForm.jsx (17 Marks)**
